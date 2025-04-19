@@ -37,20 +37,20 @@ def cliente():
             formatar_assentos(resposta)
 
         elif opcao == "2":
-            numeros = input("Digite os assentos para reservar (ex: 5 10 15): ")
+            numeros = input("Digite o número do assento que deseja reservar: ")
             s.sendall(f"RESERVAR {numeros}".encode())
             resposta = s.recv(1024).decode()
             print("\n" + resposta)
 
         elif opcao == "3":
-            numeros = input("Digite os assentos que deseja cancelar (ex: 5 10 15): ")
+            numeros = input("Digite o número do assento que deseja cancelar: ")
             s.sendall(f"CANCELAR {numeros}".encode())
             resposta = s.recv(1024).decode()
             print("\n" + resposta)
 
         elif opcao == "4":
             s.sendall("SAIR".encode())
-            print("Encerrando conexão com o servidor...")
+            print("Execução finalizada.")
             break
 
         else:
