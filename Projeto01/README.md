@@ -1,6 +1,6 @@
 SISTEMA DE GERENCIAMENTO DE ASSENTOS - TRABALHO DE PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA
 
-ARQUIVO CLIENTES.PY
+ARQUIVO CLIENTES.PY - 
 Esse arquivo tem o fito de interagir com o cliente, de maneira a obter as reservas e cancelamentos dos clientes, além de viabilizar a visualização dos assentos disponíveis. Finalmente, o script também inclui a conexão direta com o servidor (arquivo servidor.py).
 
 - Função mostrar_menu(): exibe as ações possíveis, as quais podem ser escolhidas pelo usuário;
@@ -8,13 +8,13 @@ Esse arquivo tem o fito de interagir com o cliente, de maneira a obter as reserv
 - Função formatar_assentos(): exibe o mapa de assentos, com assentos ocupados sendo representados pelo caractere "X" e assentos desocupados sendo representados pelo caractere "_";
 
 - Função cliente(): é a principal função do script, ao passo que cria a socket e viabiliza, então, a conexão com o servidor (localhost) pela porta 12345. O sistema opera, a parir disso, em loop até o usuário sair, de modo que o sistema opere de quatro formas diferentes:  
-* Quando é informado o número 1 : o sistema envia a solicitação "VER" para o servidor e recebe do mesmo a caracterização atual dos assentos, de forma a exibi-los por meio da função formatar_assentos();
-* Quando é informado o número 2 : o sistema envia a solicitação "RESERVAR" para o servidor e recebe o status da tentativa de reserva;
-* Quando é informado o número 3 : o sistema envia a solicitação "CANCELAR" para o servidor e recebe o status da tentativa de cancelamento;
-* Quando é informado o número 4 : o sistema envia a solicitação "SAIR" para o servidor e é encerrado;
+*Quando é informado o número 1 : o sistema envia a solicitação "VER" para o servidor e recebe do mesmo a caracterização atual dos assentos, de forma a exibi-los por meio da função formatar_assentos();
+*Quando é informado o número 2 : o sistema envia a solicitação "RESERVAR" para o servidor e recebe o status da tentativa de reserva;
+*Quando é informado o número 3 : o sistema envia a solicitação "CANCELAR" para o servidor e recebe o status da tentativa de cancelamento;
+*Quando é informado o número 4 : o sistema envia a solicitação "SAIR" para o servidor e é encerrado;
 
 
-ARQUIVO SERVIDOR.PY
+ARQUIVO SERVIDOR.PY - 
 Esse arquivo tem o fito de receber as solicitações do arquivo cliente.py, de forma a processá-las e garantir que não haja inconsistências nas reservas de assentos.
 
 - Classe Sistema_Assentos() : controla todo o sistema responsável por garantir a consistência das reservas por meio da atribuição de valores booleanos a cada número de assentos, de forma a controlar se estão disponíveis ou não. Além disso, a utilização da função threading.Lock() é devida à necessidade de gerir o acesso de vários clientes ao mesmo tempo, de forma que cada cliente fique limitado a sua própria thread, o que impede a modificação de um mesmo assento por dois ou mais clientes diferentes ao mesmo tempo.
