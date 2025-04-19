@@ -98,4 +98,22 @@ def iniciar_servidor():
     porta = 12345
 
     servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-... (12 linhas)
+    servidor.bind((host, porta))
+    servidor.listen(5)
+
+    print(f"Servidor executando em {host}:{porta}...")
+
+    try:
+        while True:
+            conn, addr = servidor.accept()
+            thread = threading.Thread(target=lidar_com_cliente, args=(conn, addr))
+            thread.start()
+            print(f"[ATIVO] Conexões ativas: {threading.active_count() - 1}")
+    except KeyboardInterrupt:
+        print("\n[ENCERRANDO] Servidor finalizado manualmente.")
+    finally:
+        servidor.close()
+
+if __name__ == "__main__":
+    iniciar_servidor()
+
