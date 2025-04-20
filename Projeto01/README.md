@@ -1,4 +1,5 @@
-SISTEMA DE GERENCIAMENTO DE ASSENTOS - TRABALHO DE PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA
+SISTEMA DE GERENCIAMENTO DE ASSENTOS - TRABALHO DE PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA  
+
 
 ARQUIVO CLIENTES.PY - 
 Esse arquivo tem o fito de interagir com o cliente, de maneira a obter as reservas e cancelamentos dos clientes, além de viabilizar a visualização dos assentos disponíveis. Finalmente, o script também inclui a conexão direta com o servidor (arquivo servidor.py).
