@@ -33,4 +33,6 @@ Esse arquivo tem o fito de receber as solicitações do arquivo cliente.py, de f
 
 - Função lidar_com_cliente(): recebe o que o cliente quer fazer ("VER", "RESERVAR", "CANCELAR", "SAIR") e fica escutando o cliente enquanto ele estiver conectado. Chama cada método da classe Sistema_Assentos conforme a necessidade e envia o retorno ao cliente, de acordo com a resposta de cada método.
 
-- Função iniciar_servidor() : cria o socket TCP para ouvir em localhost, na porta 12345; cria uma nova thread com a função lidar_com_cliente() para o cliente e mostra quantas conexões estão ativas. 
+- Função iniciar_servidor() : cria o socket TCP para ouvir em localhost, na porta 12345; cria uma nova thread com a função lidar_com_cliente() para o cliente e mostra quantas conexões estão ativas.
+
+OBS : o sistema também lida e trata bem erros, como entrada inválida, finalização manual do sitema, assentos não encontrados, assentos ocupados etc.
