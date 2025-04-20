@@ -9,13 +9,13 @@ Esse arquivo tem o fito de interagir com o cliente, de maneira a obter as reserv
 
 - Função cliente(): é a principal função do script, ao passo que cria a socket e viabiliza, então, a conexão com o servidor (localhost) pela porta 12345. O sistema opera, a parir disso, em loop até o usuário sair, de modo que o sistema opere de quatro formas diferentes:
   
-*Quando é informado o número 1 : o sistema envia a solicitação "VER" para o servidor e recebe do mesmo a caracterização atual dos assentos, de forma a exibi-los por meio da função formatar_assentos();
+   *Quando é informado o número 1 : o sistema envia a solicitação "VER" para o servidor e recebe do mesmo a caracterização atual dos assentos, de forma a exibi-los por meio da função formatar_assentos();
 
-*Quando é informado o número 2 : o sistema envia a solicitação "RESERVAR" para o servidor e recebe o status da tentativa de reserva;  
+   *Quando é informado o número 2 : o sistema envia a solicitação "RESERVAR" para o servidor e recebe o status da tentativa de reserva;  
 
-*Quando é informado o número 3 : o sistema envia a solicitação "CANCELAR" para o servidor e recebe o status da tentativa de cancelamento;  
+   *Quando é informado o número 3 : o sistema envia a solicitação "CANCELAR" para o servidor e recebe o status da tentativa de cancelamento;  
 
-*Quando é informado o número 4 : o sistema envia a solicitação "SAIR" para o servidor e é encerrado;  
+   *Quando é informado o número 4 : o sistema envia a solicitação "SAIR" para o servidor e é encerrado;  
 
 
 
