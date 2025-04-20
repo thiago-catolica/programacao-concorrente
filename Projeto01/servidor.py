@@ -101,16 +101,16 @@ def iniciar_servidor():
     servidor.bind((host, porta))
     servidor.listen(5)
 
-    print(f"Servidor executando em {host}:{porta}...")
+    print(f"Servidor executando em {host}:{porta}.")
 
     try:
         while True:
             conn, addr = servidor.accept()
             thread = threading.Thread(target=lidar_com_cliente, args=(conn, addr))
             thread.start()
-            print(f"[ATIVO] Conexões ativas: {threading.active_count() - 1}")
+            print(f"Número de conexões ativas: {threading.active_count() - 1}")
     except KeyboardInterrupt:
-        print("\n[ENCERRANDO] Servidor finalizado manualmente.")
+        print("\nServidor finalizado.")
     finally:
         servidor.close()
 
